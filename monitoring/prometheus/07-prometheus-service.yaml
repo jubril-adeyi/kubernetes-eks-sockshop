@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: monitoring
+  name:  promtheus-service
+  annotations: 
+    prometheus.io/scrape: "true"
+  labels: 
+    name: prometheus
+spec:
+  selector:
+    app: prometheus
+  type:  LoadBalancer 
+  ports:
+  - name:  prometheus
+    protocol: TCP
+    port: 80
+    targetPort:  9090
