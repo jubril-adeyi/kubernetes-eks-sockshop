@@ -2,8 +2,4 @@
 ## Prerequisites
 * AWS account
 * AWS CLI (configured) 
-* Terraform  
-* Kubernetes 
-* Github
-* Docker (Dockerizing nginx web-app) 
-* Nginx 
+* Terraform    
