@@ -2,6 +2,11 @@ pipeline {
     agent {
         label "agent01"
     }
+    tools {
+        terraform 'terraform'
+        git 'Default'
+    }
+
 
     stages {
         stage('Deploy') {
@@ -21,7 +26,7 @@ pipeline {
 
                         // Retrieve other required environment variables
                         def awsRegion = sh(returnStdout: true, script: 'aws configure get region').trim()
-                        def bucketName = 'your-bucket-name'
+                        def bucketName = 'buckioo2227'
 
                         // Generate a unique S3 bucket name based on the current timestamp
                         def uniqueBucketName = "${bucketName}-${System.currentTimeMillis()}"
