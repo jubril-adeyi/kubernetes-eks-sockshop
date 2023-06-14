@@ -1,38 +1,34 @@
-// // pipeline{ 
-// //     agent{
-// //         label "agent01"
-// //     }
-// //     stages{
-// //         stage('Checkout'){
-// //             steps{ 
-// //                 checkout scm
-// //             }
-// //         }
-// //         stage('Deploy')
-// //         environment{
-
-// //         }
-// //     }
-// // }
-
-pipeline {
-    agent {
+pipeline{ 
+    agent{
         label "agent01"
     }
-    
-    stages {
-        stage('Example') {
-            steps {
-                withCredentials([usernamePassword(credentialsId: 'aws-access-key', passwordVariable: 'aws-secret-key', usernameVariable: 'aws-access-key')]) {
-                    // Your code that requires AWS access credentials
-                    sh 'echo $aws-access-key'  // Access the AWS access key value as an environment variable
-                    sh 'echo $aws-secret-key'  // Access the AWS secret key value as an environment variable
-                    // Add your AWS-related commands or actions here
-                }
+    stages{
+        stage('buildt'){
+            steps{ 
+                sh "echo build"
             }
-        }
+    }
     }
 }
+
+// pipeline {
+//     agent {
+//         label "agent01"
+//     }
+    
+//     stages {
+//         stage('Example') {
+//             steps {
+//                 withCredentials([usernamePassword(credentialsId: 'aws-access-key', passwordVariable: 'aws-secret-key', usernameVariable: 'aws-access-key')]) {
+//                     // Your code that requires AWS access credentials
+//                     sh 'echo $aws-access-key'  // Access the AWS access key value as an environment variable
+//                     sh 'echo $aws-secret-key'  // Access the AWS secret key value as an environment variable
+//                     // Add your AWS-related commands or actions here
+//                 }
+//             }
+//         }
+//     }
+// }
 
 
 // // pipeline {
