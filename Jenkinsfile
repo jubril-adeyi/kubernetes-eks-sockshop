@@ -5,7 +5,6 @@ pipeline {
 
     tools {
         terraform 'terraform'
-        git 'Default'
     }
 
     stages {
