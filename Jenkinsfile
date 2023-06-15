@@ -29,7 +29,7 @@ pipeline {
                         def awsSecretAccessKey = env.'aws-secret-key'
 
                         // Install and configure AWS CLI
-                        sh 'awscli version'
+                        sh 'aws --version'
                         sh "aws configure set aws_access_key_id ${awsAccessKeyId}"
                         sh "aws configure set aws_secret_access_key ${awsSecretAccessKey}"
 
