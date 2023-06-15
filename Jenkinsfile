@@ -2,11 +2,6 @@ pipeline {
     agent {
         label "agent01"
     }
-
-    tools {
-        terraform 'terraform'
-    }
-
     stages {
         stage('Hello') {
             steps {
@@ -15,7 +10,7 @@ pipeline {
         }
         stage('terraform-check'){
             steps{
-                sh "terraform version"
+                sh 'terraform version'
             }
         }
 
