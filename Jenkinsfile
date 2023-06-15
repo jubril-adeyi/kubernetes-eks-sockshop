@@ -18,6 +18,12 @@ pipeline {
                 sh "terraform version"
             }
         }
+        stage('install-dependencies'){
+            steps{
+                sh 'apt install wget curl unzip -y'
+            }
+        }
+        
 
         stage('Deploy') {
             steps {
