@@ -2,6 +2,9 @@ pipeline {
     agent {
         label "agent01"
     }
+    tools {
+        terraform 'terraform'
+    }
     stages {
         stage('Hello') {
             steps {
