@@ -5,7 +5,7 @@ variable "access_key" {
 }
 variable "secret_key" {
   type    = string
-  default = ""
+  default = "aws"
 }
 variable "region" {
   type    = string
@@ -13,9 +13,9 @@ variable "region" {
 }
 variable "bucket_name" {
   type    = string
-  default = "terra-tfstate-2228"
+  default = ""
 }
 variable "dynamo-db-name" {
   type    = string
-  default = "terra-statelock-2228"
+  default = ""
 }

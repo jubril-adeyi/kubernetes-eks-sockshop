@@ -26,11 +26,8 @@ pipeline {
                         // Load AWS credentials
                         def awsAccessKeyId = env.'aws-access-key'
                         def awsSecretAccessKey = env.'aws-secret-key'
-
-                        // Install and configure AWS CLI
-                        // sh 'curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"'
-                        // sh 'unzip awscliv2.zip'
-                        // sh './aws/install --bin-dir /usr/local/bin --install-dir /usr/local/aws-cli --update'
+                        
+                        //set AWS credentials 
                         sh 'aws --version'
                         sh "aws configure set aws_access_key_id ${awsAccessKeyId}"
                         sh "aws configure set aws_secret_access_key ${awsSecretAccessKey}"
@@ -43,9 +40,16 @@ pipeline {
                         // Generate a unique S3 bucket name based on the current timestamp
                         def uniqueBucketName = "${bucketName}-${System.currentTimeMillis()}"
 
+                    
+
                         // Create the S3 bucket using Terraform
-                        // sh "terraform init -backend-config='bucket=${uniqueBucketName}' -backend-config='region=${awsRegion}'"
-                        // sh "terraform apply -var 'bucket_name=${uniqueBucketName}'"
+                        sh "cd backend"
+                        sh " terraform init \
+                            -var 'access_key=${awsAccessKeyId}' \
+                            -var 'secret_key=${awsSecretAccessKey}' "
+                            
+                        sh "terraform init -backend-config='bucket=${uniqueBucketName}' -backend-config='region=${awsRegion}'"
+                        sh "terraform apply -var 'bucket_name=${uniqueBucketName}'"
                     }
                 }
             }
