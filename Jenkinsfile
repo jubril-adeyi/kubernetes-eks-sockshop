@@ -4,6 +4,7 @@ pipeline {
     }
     tools {
         terraform 'terraform'
+        nodejs 'nodejs'
     }
     stages {
         stage('Hello') {
@@ -13,10 +14,10 @@ pipeline {
         }
         stage('terraform'){
             steps{
+                sh 'npm version'
                 sh 'terraform version'
             }
         }
-
        
     }
 }
