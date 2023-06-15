@@ -4,7 +4,7 @@ pipeline {
     }
     tools {
         terraform 'terraform'
-        nodejs 'nodejs'
+        nodejs 'node'
     }
     stages {
         stage('Hello') {
