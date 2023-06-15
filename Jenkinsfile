@@ -29,9 +29,7 @@ pipeline {
                         def awsSecretAccessKey = env.'aws-secret-key'
 
                         // Install and configure AWS CLI
-                        sh 'curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"'
-                        sh 'unzip awscliv2.zip'
-                        sh './aws/install --bin-dir /usr/local/bin --install-dir /usr/local/aws-cli --update'
+                        sh 'apt install awscli'
                         sh "aws configure set aws_access_key_id ${awsAccessKeyId}"
                         sh "aws configure set aws_secret_access_key ${awsSecretAccessKey}"
 
