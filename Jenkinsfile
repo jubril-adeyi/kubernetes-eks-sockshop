@@ -11,10 +11,9 @@ pipeline {
                 echo 'Hello World'
             }
         }
-        stage('terraform-check'){
+        stage('terraform'){
             steps{
                 sh 'terraform version'
-
             }
         }
 
