@@ -10,7 +10,8 @@ pipeline {
         }
         stage('terraform-check'){
             steps{
-                sh 'terraform version'
+                sh 'apt install terraform'
+
             }
         }
 
