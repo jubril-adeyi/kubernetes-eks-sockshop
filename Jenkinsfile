@@ -20,7 +20,7 @@ pipeline {
         }
         stage('install-dependencies'){
             steps{
-                sh 'apt install wget curl unzip -y'
+                sh 'sudo apt install wget curl unzip -y'
             }
         }
         
