@@ -12,3 +12,7 @@ The deployments made on the provisioned Infrastructure will consist of:
 * The sock-shop Kubernetes application 
 * Kubernetes monitoring stack which includes; Prometheus, Grafana and kube-state-metrics.
    
+## Prerequisites 
+* AWS account IAM credentials with necessary permisions for provision resources
+* AWS CLI Installed on your machine 
+* Terraform Installed on your machine 
