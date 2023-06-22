@@ -23,38 +23,38 @@ Follow these steps to get started with provisioning infrastructure using Terrafo
 
 * Clone this repository to your local machine : 
 ``
-git clone [ ..](https://github.com/jubril-adeyi/terraform-kubernetes-eks-sockshop.git)
+git clone https://github.com/jubril-adeyi/terraform-kubernetes-eks-sockshop.git
  ``
 
 * Cd into cloned the directory 
-`cd terraform-eks-sockshop`
+`cd terraform-kubernetes-eks-sockshop`
 
 * Cd into the /backend directory 
 `cd /backend`
 
 * Initialize terraform by running the  command : 
 `terraform Init `
-* Run the terraform plan command to see Preview the changes that will be applied : 
+* Run the terraform plan command to see a Preview of the changes that will be applied : 
 `terraform plan`
 * Now Run the Terraform apply command to apply these changes and provision s3 bucket and Dynamodb table that will serve as backup for terraform state files
 `terraform apply` 
-* Cd back into main directory and cd into the  /infrastructure directory
+* Cd back into the main directory and cd into the  /infrastructure directory
 `cd ../infrastructure `
 * Re-initialize terraform by running the command: 
 `terraform init`
-* Run the terraform plan command to see Preview the changes that will be applied : 
+* Run the terraform plan command to see a Preview of the changes that will be applied : 
 `terraform plan`
 * Now Run the terraform apply command to apply these changes and provision infrastructure on AWS: 
 `terraform apply`
-* Cd back into main directory and cd into the  /deployment  directory 
+* Cd back into the main directory and cd into the  /deployment  directory 
 `cd ../deployment`
-* Run the terraform plan command to see Preview the changes that will be applied : 
+* Run the terraform plan command to see a Preview of the changes that will be applied : 
 `terraform plan`
 * Now Run the Terraform apply command to apply these changes and provision applications Into EKS cluster: 
 `terraform apply`
-* Finally Cd back into main directory and cd into the  /monitoring directory 
+* Finally Cd back into the main directory and cd into the  /monitoring directory 
 `cd ../monitoring`
-* Run the terraform plan command to see Preview the changes that will be applied : 
+* Run the terraform plan command to see a Preview of the changes that will be applied : 
 `terraform plan`
 * Now Run the Terraform apply command to apply these changes and provision monitoring applications into EKS Cluster: 
 `terraform apply`
