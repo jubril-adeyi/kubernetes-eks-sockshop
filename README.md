@@ -1,6 +1,6 @@
 # Deployment of sock-shop application on AWS EKS  Using Terraform. 
 
-This repositiory contains terraform code to deploy the sock-shop application on an AWS EKS using terraform. This deployment architecture  wil consist of: 
+This repository contains terraform code to deploy the sock-shop application on an AWS EKS using terraform. This deployment architecture  wil consist of: 
 * VPC network with 4 subnets (2 private subnets and two public subnets)  in multiple availability zones 
 * Security group for the EKS Cluster 
 * IAM role with necessary permissions/policies for Cluster creation 
@@ -13,7 +13,7 @@ The deployments made on the provisioned Infrastructure will consist of:
 * Kubernetes monitoring stack which includes; Prometheus, Grafana and kube-state-metrics.
    
 ## Prerequisites 
-* AWS account IAM credentials with necessary permisions for provision resources
+* AWS account IAM credentials with necessary permissions for provision resources
 * AWS CLI Installed on your machine 
 * Terraform Installed on your machine 
 
@@ -23,7 +23,7 @@ Follow these steps to get started with provisioning infrastructure using Terrafo
 
 * Clone this repository to your local machine : 
 ``
-git clone  ..
+git clone [ ..](https://github.com/jubril-adeyi/terraform-kubernetes-eks-sockshop.git)
  ``
 
 * Cd into cloned the directory 
