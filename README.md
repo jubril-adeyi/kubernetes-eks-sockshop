@@ -4,7 +4,7 @@ This repositiory contains terraform code to deploy the sock-shop application on 
 * A VPC network with 4 subnets (2 private subnets and two public subnets)  in multiple availability zones 
 * A Security group for the EKS Cluster 
 * An IAM role with necessary permissions/policies for Cluster creation 
-* An S3 bucket to back up terraform state files 
+* An S3 bucket and Dynamodb table to back up terraform state files 
 
 The deployments made on the provisioned Infrastructure will consist of: 
 * Kubernetes deployment and service for an nginx web application frontend 
