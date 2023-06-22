@@ -34,10 +34,16 @@ git clone  ..
 
 * Initialize terraform by running the  command : 
 `terraform Init `
-* Run the terraform plan command to see Preview the changes that will be applied : terraform plan 
-* Now Run the Terraform apply command to apply these changes and provision s3 bucket and Dynamodb table that will serve as backup for terraform state files 
-* Cd back into main directory and cd into the  /infrastructure directory 
-* Re-initialize terraform by running the command: terraform init 
-* Run the terraform plan command to see Preview the changes that will be applied : Terraform plan
-* Now Run the Terraform apply command to apply these changes and provision infrastructure on AWS: terraform apply 
+* Run the terraform plan command to see Preview the changes that will be applied : 
+`terraform plan`
+* Now Run the Terraform apply command to apply these changes and provision s3 bucket and Dynamodb table that will serve as backup for terraform state files
+`terraform apply` 
+* Cd back into main directory and cd into the  /infrastructure directory
+`cd ../infrastructure `
+* Re-initialize terraform by running the command: 
+`terraform init`
+* Run the terraform plan command to see Preview the changes that will be applied : 
+`terraform plan`
+* Now Run the terraform apply command to apply these changes and provision infrastructure on AWS: 
+`terraform apply`
 * 
