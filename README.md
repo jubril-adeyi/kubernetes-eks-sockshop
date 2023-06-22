@@ -47,8 +47,14 @@ git clone  ..
 * Now Run the terraform apply command to apply these changes and provision infrastructure on AWS: 
 `terraform apply`
 * Cd back into main directory and cd into the  /deployment  directory 
-`cd ../deployment
+`cd ../deployment`
 * Run the terraform plan command to see Preview the changes that will be applied : 
 `terraform plan`
 * Now Run the Terraform apply command to apply these changes and provision applications on AWS EKS: 
+`terraform apply`
+* Finally Cd back into main directory and cd into the  /monitoring directory 
+`cd ../monitoring`
+* Run the terraform plan command to see Preview the changes that will be applied : 
+`terraform plan`
+* Now Run the Terraform apply command to apply these changes and provision monitoring applications on AWS EKS: 
 `terraform apply`
