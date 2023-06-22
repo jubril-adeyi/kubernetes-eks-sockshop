@@ -46,4 +46,9 @@ git clone  ..
 `terraform plan`
 * Now Run the terraform apply command to apply these changes and provision infrastructure on AWS: 
 `terraform apply`
-* 
+* Cd back into main directory and cd into the  /deployment  directory 
+`cd ../deployment
+* Run the terraform plan command to see Preview the changes that will be applied : 
+`terraform plan`
+* Now Run the Terraform apply command to apply these changes and provision infrastructure on AWS: 
+`terraform apply`
