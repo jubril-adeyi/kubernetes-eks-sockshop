@@ -22,7 +22,9 @@ The deployments made on the provisioned Infrastructure will consist of:
 Follow these steps to get started with provisioning infrastructure using Terraform. 
 
 * Clone this repository to your local machine : 
-``git clone  ..``
+``
+git clone  ..
+ ``
 
 * Cd into cloned the directory 
 cd terraform-eks-sockshop 
