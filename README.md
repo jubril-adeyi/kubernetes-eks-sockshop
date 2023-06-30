@@ -62,10 +62,10 @@ git clone https://github.com/jubril-adeyi/terraform-kubernetes-eks-sockshop.git
 
 This repository is structured into four main directories: "/backend", "/infrastructure", "/deployment", and "/monitoring".
 
-1.  <b>Backend directory<b>: The backend directory consists of Terraform scripts that provision an S3 bucket and DynamoDB table to serve as the remote backend.
+1.  <b>Backend directory</b>: The backend directory consists of Terraform scripts that provision an S3 bucket and DynamoDB table to serve as the remote backend.
 
-2. Infrastructure directory: The infrastructure directory contains Terraform code for provisioning the foundational infrastructure for this deployment. It includes invoking the remote backend, setting up the VPC network, creating necessary roles for EKS cluster provisioning, configuring security groups, and deploying the EKS cluster along with its nodes.
+2. <b>Infrastructure directory</b>: The infrastructure directory contains Terraform code for provisioning the foundational infrastructure for this deployment. It includes invoking the remote backend, setting up the VPC network, creating necessary roles for EKS cluster provisioning, configuring security groups, and deploying the EKS cluster along with its nodes.
 
-3. Deployment directory: The deployment directory contains Terraform code to deploy Kubernetes API objects for the nginx web application and the sock shop application. This includes defining deployments, services, and secrets required for running these applications.
+3. <b>Deployment directory</b>: The deployment directory contains Terraform code to deploy Kubernetes API objects for the nginx web application and the sock shop application. This includes defining deployments, services, and secrets required for running these applications.
 
-4. Monitoring directory: The monitoring directory contains Terraform code responsible for deploying and configuring monitoring applications within the EKS cluster. This directory contains subdirectories that hold Kubernetes manifests for these monitoring applications. The Terraform code utilizes these manifests for the deployment process.
+4. <b>Monitoring directory</b>: The monitoring directory contains Terraform code responsible for deploying and configuring monitoring applications within the EKS cluster. This directory contains subdirectories that hold Kubernetes manifests for these monitoring applications. The Terraform code utilizes these manifests for the deployment process.
