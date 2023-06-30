@@ -62,7 +62,7 @@ git clone https://github.com/jubril-adeyi/terraform-kubernetes-eks-sockshop.git
 
 This repository is structured into four main directories: "/backend", "/infrastructure", "/deployment", and "/monitoring".
 
-1.  Backend directory: The backend directory consists of Terraform scripts that provision an S3 bucket and DynamoDB table to serve as the remote backend.
+1.  <b>Backend directory<b>: The backend directory consists of Terraform scripts that provision an S3 bucket and DynamoDB table to serve as the remote backend.
 
 2. Infrastructure directory: The infrastructure directory contains Terraform code for provisioning the foundational infrastructure for this deployment. It includes invoking the remote backend, setting up the VPC network, creating necessary roles for EKS cluster provisioning, configuring security groups, and deploying the EKS cluster along with its nodes.
 
