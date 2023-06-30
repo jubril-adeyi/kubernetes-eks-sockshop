@@ -66,6 +66,6 @@ This repository is structured into four main directories: "/backend", "/infrastr
 
 2. <b>Infrastructure directory</b>: The infrastructure directory contains Terraform code for provisioning the foundational infrastructure for this deployment. It includes invoking the remote backend, setting up the VPC network, creating necessary roles for EKS cluster provisioning, configuring security groups, and deploying the EKS cluster along with its nodes.
 
-3. <b>Deployment directory</b>: The deployment directory contains Terraform code to deploy Kubernetes API objects for the nginx web application and the sock shop application. This includes defining deployments, services, and secrets required for running these applications.
+3. <b>Deployment directory</b>: The deployment directory contains Terraform code to deploy Kubernetes API objects for the sock shop application. This includes defining deployments, services, and secrets required for running these applications.
 
 4. <b>Monitoring directory</b>: The monitoring directory contains Terraform code responsible for deploying and configuring monitoring applications within the EKS cluster. This directory contains subdirectories that hold Kubernetes manifests for these monitoring applications. The Terraform code utilizes these manifests for the deployment process.
