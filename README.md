@@ -68,12 +68,20 @@ This repository is structured into four main directories: "/backend", "/infrastr
 
 3. <b>Deployment directory</b>: The deployment directory contains Terraform code to deploy Kubernetes API objects for the sock shop application. This includes defining deployments, services, and secrets required for running these applications.
 
-4. <b>Monitoring directory</b>: The monitoring directory contains Terraform code responsible for deploying and configuring monitoring applications within the EKS cluster. This directory contains subdirectories that hold Kubernetes manifests for these monitoring applications. The Terraform code utilizes these manifests for the deployment process.
+4. <b>Monitoring directory</b>: The monitoring directory contains Terraform code responsible for deploying and configuring monitoring applications within the EKS cluster including Grafana, Prometheus and Kube-state-metrics. This directory contains subdirectories that hold Kubernetes manifests for these monitoring applications. The Terraform code utilizes these manifests for the deployment process.
 
 ## Architecture Overview 
 
 The following resources are provisioned 
 
 1. VPC network with 2 private subnets and 2 public subnets in multiple availability zones 
-2. EKS Cluster with 2-4 t3.medium nodes in a node group 
+2. EKS Cluster with 2-4 t3.medium nodes in a node group. 
+## Cleaning up 
+
+To clean up thr provisikned resources run the following command: `terraform destroy` in each directory this order; in the `/monitoring` directory, `/deployment` directory , `/infrastructure` directory, and the `/backend` directory. This will destroy the resources in the right order. 
+Please note that this is irreversible and will permanently remove the resources. 
+
+## Conclusion 
+
+This repository demonstrates a seamless process of Using terraform to deploy a containerized application on kubernetes seamlessly while adhering to best practices. Feel free to modify the code to your specific needs, and your contributions are welcome. 
 
