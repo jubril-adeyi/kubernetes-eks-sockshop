@@ -13,9 +13,9 @@ variable "region" {
 }
 variable "bucket_name" {
   type    = string
-  default = ""
+  default = "terra-tfstate-2228"
 }
 variable "dynamo-db-name" {
   type    = string
-  default = ""
+  default = "terra-tfstate-2228"
 }
