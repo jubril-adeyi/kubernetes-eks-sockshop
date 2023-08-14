@@ -1,3 +1,12 @@
+variable "access_key" {
+  type    = string
+  default = ""
+}
+variable "secret_key" {
+  type    = string
+  default = ""
+}
+
 variable "docker-image" {
   type    = string
   default = "slickboy/jb-web:latest"

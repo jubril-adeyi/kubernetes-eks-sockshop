@@ -35,7 +35,7 @@ pipeline {
                         sh " terraform plan\
                             -var 'access_key=${awsAccessKeyId}' \
                             -var 'secret_key=${awsSecretAccessKey}' "
-                        sh " terraform apply --auto-approve \
+                        sh " terraform destroy --auto-approve \
                             -var 'access_key=${awsAccessKeyId}' \
                             -var 'secret_key=${awsSecretAccessKey}' "
                         }

@@ -7,6 +7,15 @@ variable "aws_region" {
   description = "sets the region"
 }
 
+variable "access_key" {
+  type    = string
+  default = ""
+}
+variable "secret_key" {
+  type    = string
+  default = ""
+}
+
 variable "cidr_blocks" {
   type        = string
   default     = "10.0.0.0/16"
