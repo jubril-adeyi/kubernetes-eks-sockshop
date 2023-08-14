@@ -35,4 +35,13 @@ variable "k8s_api_version" {
   default = "client.authentication.k8s.io/v1beta1"
 }
 
+variable "bucket_name" {
+  type    = string
+  default = "terra-tfstate-2229"
+}
+variable "dynamo-db-name" {
+  type    = string
+  default = "terra-tfstate-2229"
+}
+
 
