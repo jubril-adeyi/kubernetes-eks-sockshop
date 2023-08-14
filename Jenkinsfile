@@ -35,7 +35,7 @@ pipeline {
                         sh " terraform plan\
                             -var 'access_key=${awsAccessKeyId}' \
                             -var 'secret_key=${awsSecretAccessKey}' "
-                        sh " terraform apply --auto-approve \
+                        sh " terraform destroy --auto-approve \
                             -var 'access_key=${awsAccessKeyId}' \
                             -var 'secret_key=${awsSecretAccessKey}' "
                         }
@@ -87,7 +87,7 @@ pipeline {
                         sh "aws configure set aws_access_key_id ${awsAccessKeyId}"
                         sh "aws configure set aws_secret_access_key ${awsSecretAccessKey}"
                         sh "aws configure set region 'us-east-1'"
-                        
+
                         // Deploy app using Terraform
                         dir('deployments'){sh " terraform init \
                             -var 'access_key=${awsAccessKeyId}' \
