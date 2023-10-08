@@ -36,10 +36,10 @@ resource "aws_s3_bucket_versioning" "backend_bucket_versioning" {
   }
 }
 
-# resource "aws_s3_bucket_acl" "backend_bucket_acl" {
-#   bucket = aws_s3_bucket.tf_backend_bucket.id
-#   acl = "private"
-# }
+resource "aws_s3_bucket_acl" "backend_bucket_acl" {
+  bucket = aws_s3_bucket.tf_backend_bucket.id
+  acl = "private"
+}
 
 
 # DynamoDb for state file locking
