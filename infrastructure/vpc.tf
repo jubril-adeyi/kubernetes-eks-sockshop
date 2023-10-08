@@ -54,7 +54,7 @@ resource "aws_subnet" "eks-subnets4" {
 #creating Nat gateway 
 
 resource "aws_eip" "eks-eip" {
-  vpc = true
+  domain = "vpc"
 
   tags = {
     Name = "eks-eip"
