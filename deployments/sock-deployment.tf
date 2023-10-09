@@ -6,11 +6,11 @@ data "kubectl_file_documents" "docs" {
 
 //create sock-shop namespace
 
-resource "kubernetes_namespace" "kube-namespace-socks" {
-  metadata {
-    name = "sock-shop"
-  }
-}
+# resource "kubernetes_namespace" "kube-namespace-socks" {
+#   metadata {
+#     name = "sock-shop"
+#   }
+# }
 
 
 // Creating a kubectl manifest resource for sock-shop manifest 
